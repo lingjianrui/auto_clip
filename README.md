@@ -1,7 +1,7 @@
 auto_clip是一个命令行工具  
 可以根据yaml配置文件进行自动视频剪辑  
 
-test.yaml  
+test_script.yaml  
 ```
 编号: 森咖啡-script1
 工程: 森咖啡
@@ -86,5 +86,14 @@ cookbook.yaml
 素材文件前缀: 森咖啡
 ```  
 Python3.9.2  
-python autogen.py --script test.yaml --project project_folder  
+
+### 如何运行  
+```  
+python autogen.py --script test_script.yaml --project project_folder  
+```  
+会在project_folder中生成cookbook.yaml 以及 配音 和 字幕 文件
+
+```  
 python engine.py --project project_folder --assets assets_folder  
+```  
+指定工程目录project_folder 和 素材目录生成视频
